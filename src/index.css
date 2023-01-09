@@ -1,13 +1,372 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu-btn {
+  top: 35px;
+  left: 35px;
+  cursor: pointer;
+}
+
+.menu-bar {
+  background: #000;
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 260px;
+}
+
+.profile-branding .portrait {
+  width: 70px;
+  height: 70px;
+  background: url(../public/portrait.png);
+  border-radius: 50%;
+  background-size: cover;
+  margin-top: 10px;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-around;
+  height: 25vh;
+  background: rgb(114, 66, 159);
+  color: #fff;
+  padding-bottom: 170px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.description .view-profile .view a {
+  background: rgb(114, 66, 159);
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: #fff 1px solid;
+}
+
+.description .view-profile {
+  margin-top: 25px;
+}
+
+.side-links {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 55px;
+  width: 25vw;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.side-link i {
+  padding: 0px 3px;
+  margin-right: 15px;
+  border: #333 1px solid;
+  border-radius: 50%;
+  font-size: 15px;
+}
+
+.side-links .current {
+  background: rgb(222, 222, 222);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 78.4vw;
+  height: 116vh;
+  background: rgb(244, 236, 255);
+}
+
+.options .balance-loan {
+  display: flex;
+  margin-top: -7px;
+}
+
+.options .balance-loan .wallet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgb(239, 230, 239);
+  width: 37vw;
+  height: 37vh;
+  padding: 1vh 2vh 2vh 2vh;
+  margin-top: -7vh;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  border-radius: 10px;
+  box-shadow: #333 0px 3px 25px -18px;
+}
+
+.options .balance-loan .wallet .wallet-date {
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+  font-weight: lighter;
+}
+
+.options .balance-loan .wallet .wallet-balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+.options .balance-loan .wallet .wallet-balance .dollar {
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.options .balance-loan .wallet .wallet-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.options .balance-loan .wallet .wallet-icons .name-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options .balance-loan .wallet .wallet-icons .name-icon i {
+  padding: 8px;
+  background: rgb(114, 66, 159);
+  color: #fff;
+  border-radius: 50%;
+}
+
+.options .balance-loan .wallet .wallet-icons .name-icon p {
+  font-size: small;
+}
+
+.options .balance-loan .loan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 37vw;
+  height: 37vh;
+  background: rgb(237, 237, 237);
+  margin-top: -7vh;
+  border-radius: 10px;
+  box-shadow: #333 0px 3px 25px -18px;
+}
+
+.options .balance-loan .loan .apply-loan {
+  background: rgb(17, 17, 104);
+  padding: 3px 100px;
+  margin-top: 10px;
+}
+
+.options .balance-loan .loan .apply-loan a {
+  color: #fff;
+  font-size: 13px;
+}
+
+.options .make-payment {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -40px;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  margin-bottom: -60px;
+  padding: 30px 10px;
+  background: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: #333 0px 3px 25px -18px;
+}
+
+.options .make-payment .make-pay {
+  display: flex;
+  align-items: center;
+}
+
+.options .make-payment .make-pay i {
+  background: rgb(17, 17, 104);
+  color: #fff;
+  font-size: 7px;
+  font-style: italic;
+  padding: 2.5px 5px;
+  border-radius: 50%;
+}
+
+.options .make-payment .make-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+.options .make-payment .make-option i {
+  font-size: xx-large;
+  /* color: rgb(129, 126, 126); */
+}
+
+.options .make-payment .make-option p {
+  font-size: 8px;
+  font-weight: lighter;
+}
+
+.options .make-payment .make-prev {
+  font-size: 40px;
+  color: rgb(52, 52, 133);
+  cursor: pointer;
+}
+
+.options .make-payment .make-next {
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.options .food-product {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  background: rgb(245, 245, 245);
+  padding-bottom: 20px;
+  /* margin-top:  100px; */
+  margin-bottom: -20px;
+  font-size: 15px;
+  box-shadow: #333 -5px 0px 20px -20px;
+}
+
+.options .food-product .chocolate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 30px 20px 50px;
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: #333 0px 0px 25px -16px;
+  font-size: 13px;
+}
+
+.options .food-product .chocolate .food-img {
+  width: 100px;
+  height: 80px;
+  background: url(../public/chocolate.jpg);
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-right: 30px;
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+}
+
+.options .food-product .chocolate .chocolate-processed p {
+  margin-right: 60px;
+  text-align: center;
+  background: purple;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 20px;
+}
+
+.options .food-product .chocolate>div {
+  text-align: start;
+  flex-basis: 100px;
+}
+
+.options .food-product .cheesecake {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: -5px 30px 0px 50px;
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: #333 0px 0px 25px -16px;
+  font-size: 13px;
+}
+
+.options .food-product .cheesecake>div {
+  text-align: start;
+  flex-basis: 100px;
+}
+
+.options .food-product .cheesecake .food-img {
+  width: 100px;
+  height: 80px;
+  background: url(../public/cheese.jpg);
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-right: 30px;
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+}
+
+.options .food-product .cheesecake .cheese-hold p {
+  margin-right: 60px;
+  text-align: center;
+  background: blue;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 20px;
 }
