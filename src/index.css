@@ -49,7 +49,7 @@ a {
 .profile-branding .portrait {
   width: 70px;
   height: 70px;
-  background: url(./assets/portrait.png);
+  background: url(./assets/images/portrait.png);
   border-radius: 50%;
   background-size: cover;
   margin-top: 10px;
@@ -100,6 +100,7 @@ a {
   padding-left: 25px;
   margin-bottom: 15px;
   font-size: 13px;
+  cursor: pointer;
 }
 
 .side-link i {
@@ -305,7 +306,7 @@ a {
 .options .food-product .chocolate .food-img {
   width: 100px;
   height: 80px;
-  background: url(./assets/chocolate.jpg);
+  background: url(./assets/images/chocolate.jpg);
   background-size: cover;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -345,7 +346,7 @@ a {
 .options .food-product .cheesecake .food-img {
   width: 100px;
   height: 80px;
-  background: url(./assets/cheese.jpg);
+  background: url(./assets/images/cheese.jpg);
   background-size: cover;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
