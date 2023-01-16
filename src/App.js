@@ -1,5 +1,4 @@
 import Navs from "./components/Navs";
-import { AiOutlineHome } from "react-icons/ai";
 import IconSlider from "./components/IconSlider";
 
 function App() {
