@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { AiOutlineHome } from "react-icons/ai"
 import { TbDeviceMobileVibration, TbTransferOut } from 'react-icons/tb'
 import { FcSimCardChip, FcDisclaimer } from 'react-icons/fc'
 import { GiShoebillStork } from 'react-icons/gi'
@@ -8,6 +9,11 @@ import { RiLogoutCircleRLine } from 'react-icons/ri'
 const Navs = () => {
 
     const [navs] = useState([
+        {
+            id: 1,
+            icon: AiOutlineHome,
+            link: 'Home'
+        },
         {
             id: 2,
             icon: TbDeviceMobileVibration,

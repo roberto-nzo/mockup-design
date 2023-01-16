@@ -34,10 +34,6 @@ function App() {
           </div>
 
           <div className="side-links">
-            <div className="side-link current">
-              <i><AiOutlineHome /></i>
-              <p>Home</p>
-            </div>
 
             <Navs />
 
